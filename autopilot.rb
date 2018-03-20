@@ -1,3 +1,4 @@
+require 'awesome_print'
 
 def get_new_car
   {
@@ -6,6 +7,12 @@ def get_new_car
     gas: 100,
   }
 end
+
+# @get_new_car = {
+#     city: 'Toronto',
+#     passengers: 0,
+#     gas: 100,
+#   }
 
 def add_car(cars, new_car)
   cars << new_car
