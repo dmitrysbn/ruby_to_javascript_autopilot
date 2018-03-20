@@ -11,15 +11,11 @@ function addCar(cars, newCar) {
   return "Adding new car to fleet. Fleet size is now " + cars.length + "."
 }
 
-// console.log(addCar([], getNewCar()));
-
 function pickUpPassenger(car) {
   car.passengers += 1;
   car.gas -= 10;
   return "Picked up passenger. Car now has " + car.passengers + " passengers.";
 }
-
-// console.log(pickUpPassenger(getNewCar()));
 
 function getDestination(car) {
   if (car.city === 'Toronto') {
@@ -31,8 +27,6 @@ function getDestination(car) {
   }
 }
 
-// console.log(getDestination(getNewCar()));
-
 function fillUpGas(car) {
   var oldGas = car.gas;
   car.gas = 100;
@@ -42,8 +36,6 @@ function fillUpGas(car) {
 function getGasDisplay(gasAmount) {
   return gasAmount + "%";
 }
-
-// console.log(fillUpGas(getNewCar()));
 
 function drive(car, cityDistance) {
   if (car.gas < cityDistance) {
@@ -55,15 +47,11 @@ function drive(car, cityDistance) {
   return "Drove to " + car.city + ". Remaining gas: " + getGasDisplay(car.gas) + ".";
 }
 
-// console.log(drive(getNewCar(), 50));
-
 function dropOffPassengers(car) {
   var previousPassengers = car.passengers;
   car.passengers = 0;
   return "Dropped off " + previousPassengers + " passengers.";
 }
-
-// console.log(dropOffPassengers(getNewCar()));
 
 function act(car) {
   var distanceBetweenCities = 50;
@@ -82,8 +70,6 @@ function act(car) {
   }
 }
 
-// console.log(act(getNewCar()));
-
 function commandFleet(cars) {
   for (var count = 0; count < cars.length; count++) {
     var action = act(cars[count]);
@@ -91,8 +77,6 @@ function commandFleet(cars) {
   }
   console.log('---');
 }
-
-// console.log(commandFleet(cars));
 
 function addOneCarPerDay(cars, numDays) {
   for (var i = 0; i < numDays; i++) {
